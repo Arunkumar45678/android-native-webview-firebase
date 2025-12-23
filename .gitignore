@@ -1,0 +1,11 @@
+.gradle/
+build/
+local.properties
+*.iml
+
+# Firebase secrets
+google-services.json
+serviceAccount.json
+
+# PHP vendor optional
+backend-php/firebase/vendor/
