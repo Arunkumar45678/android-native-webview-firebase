@@ -1,4 +1,4 @@
-package com.yourapp.webview;
+package com.finaltest.app;
 
 import android.content.Intent;
 import android.os.Bundle;
