@@ -8,7 +8,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "547387859948:android:57f3c1b9a98b09c6d356c9"
+        applicationId "1:547387859948:android:57f3c1b9a98b09c6d356c9"
         minSdk 21
         targetSdk 34
         versionCode 1
