@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace "com.finaltest.app"
+    namespace "com.ase.ase12345"
     compileSdk 34
 
     defaultConfig {
