@@ -1,8 +1,32 @@
-apply plugin: 'com.google.gms.google-services'
+plugins {
+    id "com.android.application"
+    id "com.google.gms.google-services"
+}
+
+android {
+    namespace "com.android-native-webview-firebase.webview"
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.yourapp.webview"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+}
 
 dependencies {
-    implementation platform(
-      'com.google.firebase:firebase-bom:33.3.0')
-    implementation 'com.google.firebase:firebase-auth'
-    implementation 'com.google.android.gms:play-services-auth:21.0.1'
+    implementation platform("com.google.firebase:firebase-bom:33.3.0")
+    implementation "com.google.firebase:firebase-auth"
+    implementation "com.google.android.gms:play-services-auth:21.0.1"
 }
