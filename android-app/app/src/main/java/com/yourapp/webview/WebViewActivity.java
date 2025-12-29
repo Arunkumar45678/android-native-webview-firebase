@@ -1,4 +1,4 @@
-package com.ase.ase12345;
+package com.ase.aseapp;
 
 import android.content.Intent;
 import android.os.Bundle;
