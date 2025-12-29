@@ -18,6 +18,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ase12345
+rootProject.name = "NativeWebViewFirebase
 "
 include(":app")
