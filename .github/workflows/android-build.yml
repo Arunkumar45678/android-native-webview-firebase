@@ -35,6 +35,19 @@ jobs:
       # 5️⃣ Make gradlew executable
       - name: Grant execute permission for gradlew
         run: chmod +x android-app/gradlew
+      - name: Create debug keystore (TEMP)
+       run: |
+     mkdir -p ~/.android
+      keytool -genkeypair \
+      -alias androiddebugkey \
+      -keyalg RSA \
+      -keysize 2048 \
+      -validity 10000 \
+      -keystore ~/.android/debug.keystore \
+      -storepass android \
+      -keypass android \
+      -dname "CN=Android Debug,O=Android,C=US"
+      
 
       # 🔐 6️⃣ TEMPORARY — PRINT DEBUG SHA-1 (REMOVE LATER)
       - name: Print Debug SHA-1 (TEMP)
