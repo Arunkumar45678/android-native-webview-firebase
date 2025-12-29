@@ -33,22 +33,19 @@ jobs:
       
       - name: Grant execute permission for gradlew
         run: chmod +x android-app/gradlew
-        
       - name: Create debug keystore (TEMP)
         run: |
-          mkdir -p ~/.android
-          keytool -genkeypair \
-      -alias androiddebugkey \
-      -keyalg RSA \
-      -keysize 2048 \
-      -validity 10000 \
-      -keystore ~/.android/debug.keystore \
-      -storepass android \
-      -keypass android \
-      -dname "CN=Android Debug,O=Android,C=US"
-      
-
-      - name: Print Debug SHA-1 (TEMP)
+         mkdir -p ~/.android
+         keytool -genkeypair \
+      - alias androiddebugkey \
+      - keyalg RSA \
+      - keysize 2048 \
+      - validity 10000 \
+      - keystore ~/.android/debug.keystore \
+      - storepass android \
+      - keypass android \
+      - dname "CN=Android Debug,O=Android,C=US"
+     - name: Print Debug SHA-1 (TEMP)
         run: |
           cd android-app
           ./gradlew signingReport
