@@ -36,25 +36,7 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x android-app/gradlew
 
-      # 🔐 6️⃣ FORCE CREATE DEBUG KEYSTORE (TEMP)
-      - name: Create debug keystore (TEMP)
-        run: |
-          mkdir -p ~/.config/.android
-          keytool -genkeypair \
-            -alias androiddebugkey \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -keystore ~/.config/.android/debug.keystore \
-            -storepass android \
-            -keypass android \
-            -dname "CN=Android Debug,O=Android,C=US"
-
-      # 🔍 7️⃣ PRINT ANDROID DEBUG SHA-1 (TEMP)
-      - name: Print Debug SHA-1 (TEMP)
-        run: |
-          cd android-app
-          ./gradlew signingReport
+    
 
       # 8️⃣ Build DEBUG APK
       - name: Build Debug APK
