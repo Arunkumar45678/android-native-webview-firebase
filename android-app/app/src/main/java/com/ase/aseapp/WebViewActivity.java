@@ -30,7 +30,7 @@ public class WebViewActivity extends AppCompatActivity {
         webView.setWebViewClient(new AuthWebViewClient());
         setContentView(webView);
 
-        webView.loadUrl("https://testase.gt.tc");
+        webView.loadUrl("https://testase.gt.tc/xx");
     }
 
     private class AuthWebViewClient extends WebViewClient {
