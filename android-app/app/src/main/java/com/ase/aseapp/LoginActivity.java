@@ -28,17 +28,7 @@ protected void onCreate(Bundle savedInstanceState) {
     setContentView(R.layout.activity_login);
 }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        firebaseAuth = FirebaseAuth.getInstance();
-
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-        if (currentUser != null) {
-            openWebView();
-            return;
-        }
+    
 
         setContentView(R.layout.activity_login);
 
