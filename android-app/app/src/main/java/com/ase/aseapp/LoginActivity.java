@@ -21,6 +21,12 @@ public class LoginActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 1001;
     private FirebaseAuth firebaseAuth;
     private GoogleSignInClient googleSignInClient;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    setTheme(R.style.Theme_ASE); // remove splash
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_login);
+}
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
