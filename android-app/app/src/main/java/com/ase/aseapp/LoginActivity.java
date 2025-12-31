@@ -60,6 +60,7 @@ protected void onCreate(Bundle savedInstanceState) {
                                 .getResult(ApiException.class);
 
                 firebaseAuthWithGoogle(account.getIdToken());
+                TokenStore.setIdToken(idToken);
 
             } catch (ApiException e) {
                 e.printStackTrace();
