@@ -3,6 +3,6 @@
 
     <!-- Firebase Google OAuth -->
     <string name="default_web_client_id">
-        547387859948-q11iadgmn1n3dsquppoavr1be0im2bm7.apps.googleusercontent.com
+       ase12345.firebaseapp.com
     </string>
 </resources>
